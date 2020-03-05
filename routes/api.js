@@ -13,9 +13,8 @@ const checkJWT = require('../middlewares/check-jwt');
 const upload = require('../middlewares/uploadMiddleware');
 
 const UsuarioController = require('../controllers/UsuarioController');
-//const SchoolController = require('../controllers/SchoolController');
-//const FacultyController = require('../controllers/FacultyController');
-//const DepartmentController = require('../controllers/DepartmentController');
+const SedesController = require('../controllers/SedesController');
+const ComplejoController = require('../controllers/ComplejosController');
 
 require('dotenv').config();
 
@@ -25,38 +24,46 @@ require('dotenv').config();
  |-------------------------
  */
 
-// developer welcome
+// por defecto
 router.get('/usuario/', UsuarioController.welcome);
 
-// developer login
+// login
 router.post('/usuario/login', UsuarioController.login);
 
-router.post('/usuario/create_usuario', UsuarioController.createUsuarioAccount);
-// create School account
-//router.post('/usuario/create_school_acct', checkJWT, upload.single('logo'), DeveloperController.createSchoolAccount);
+router.post('/usuario/create_usuario',checkJWT, upload.single('logo'),UsuarioController.createUsuarioAccount);
 
-// fetch school accounts
-//router.get('/developer/get_school_acct', checkJWT, DeveloperController.fetchSchools);
+/**
+ |-------------------------
+ | Sede Api Routes
+ |-------------------------
+ */
+// create sede
+router.post('/sede/create_sede', checkJWT, upload.single('logo'), SedesController.createSede);
 
-// update School account
-//router.post('/developer/update_school_acct/:id', checkJWT, upload.single('logo'), DeveloperController.updateSchoolAccount);
+// all sedes
+router.get('/sede/get_sedes', checkJWT, SedesController.fetchSedes);
 
-// delete school account
-//router.delete('/developer/delete_school_acct/:id', checkJWT, DeveloperController.deleteSchoolAccount);
+// update sede
+router.post('/sede/update_sede/:id', checkJWT, upload.single('logo'), SedesController.updateSede);
 
-// create Campus account
-//router.post('/developer/create_campus_acct', checkJWT, DeveloperController.createCampusAccount);
+// delete sede
+router.delete('/sede/delete_sede/:id', checkJWT, SedesController.deleteSede);
 
-// create Faculty account
-//router.post('/developer/create_faculty_acct', checkJWT, upload.single('faculty_pix'), DeveloperController.createFacultyAccount);
+/**
+ |-------------------------
+ | Complejo Api Routes
+ |-------------------------
+ */
+// create complejo
+router.post('/complejo/create_complejo', checkJWT, ComplejoController.createComplejo);
 
-// update Faculty account
-//router.post('/developer/update_faculty_acct/:id',checkJWT,upload.single('faculty_pix'), DeveloperController.updateFacultyAccount);
+// all complejo
+router.get('/complejo/get_complejos', checkJWT, ComplejoController.fetchComplejos);
 
-// fetch faculty account
-//router.get('/developer/get_faculty_acct/:id', checkJWT, DeveloperController.fetchFacultyAccount)
+// update complejo
+router.post('/complejo/update_complejo/:id', checkJWT, upload.single('logo'), ComplejoController.updateComplejo);
 
-// create Department account
-//router.post('/developer/create_dept_acct', checkJWT, upload.single('logo'), DeveloperController.createDeptAccount);
+// delete sede
+router.delete('/complejo/delete_complejo/:id', checkJWT, ComplejoController.deleteComplejo);
 
 module.exports = router;

@@ -2,8 +2,8 @@
  /------------------------------------
  / Usuario Controller
  /-------------------------------------
- / Holds all basic operations
- / of the usuario
+ / operaciones de login
+ / y creacion de usuario
  */
 
 const callbacks = require('../config/callback.js');
