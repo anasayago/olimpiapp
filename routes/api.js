@@ -15,6 +15,8 @@ const upload = require('../middlewares/uploadMiddleware');
 const UsuarioController = require('../controllers/UsuarioController');
 const SedesController = require('../controllers/SedesController');
 const ComplejoController = require('../controllers/ComplejosController');
+const SubsedeController = require('../controllers/SubsedesController');
+const DeporteController = require('../controllers/DeportesController');
 
 require('dotenv').config();
 
@@ -66,4 +68,36 @@ router.post('/complejo/update_complejo/:id', checkJWT, upload.single('logo'), Co
 // delete sede
 router.delete('/complejo/delete_complejo/:id', checkJWT, ComplejoController.deleteComplejo);
 
+/**
+ |-------------------------
+ | Deporte Api Routes
+ |-------------------------
+ */
+// create deporte
+router.post('/deporte/create_deporte', checkJWT, DeporteController.createDeporte);
+
+// all deporte
+router.get('/deporte/get_deportes', checkJWT, DeporteController.fetchDeportes);
+
+// update deporte
+router.post('/deporte/update_deporte/:id', checkJWT, upload.single('logo'), DeporteController.updateDeporte);
+
+// delete deporte
+router.delete('/deporte/delete_deporte/:id', checkJWT, DeporteController.deleteDeporte);
+/**
+ |-------------------------
+ | Subsede Api Routes
+ |-------------------------
+ */
+// create subsede
+router.post('/subsede/create_subsede', checkJWT, SubsedeController.createSubsede);
+
+// all subsede
+router.get('/subsede/get_subsedes', checkJWT, SubsedeController.fetchSubsedes);
+
+// update subsede
+router.post('/subsede/update_subsede/:id', checkJWT, upload.single('logo'), SubsedeController.updateSubsede);
+
+// delete subsede
+router.delete('/subsede/delete_subsede/:id', checkJWT, SubsedeController.deleteSubsede);
 module.exports = router;
