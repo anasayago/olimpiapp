@@ -31,6 +31,7 @@ router.get('/usuario/', UsuarioController.welcome);
 // developer login
 router.post('/usuario/login', UsuarioController.login);
 
+router.post('/usuario/create_usuario', UsuarioController.createUsuarioAccount);
 // create School account
 //router.post('/usuario/create_school_acct', checkJWT, upload.single('logo'), DeveloperController.createSchoolAccount);
 
