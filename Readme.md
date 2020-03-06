@@ -51,11 +51,11 @@ _En el directorio principal del proyecto, archivo:prueba_practica.postman_collec
 
 ## Pregunta libre (Opcional, no requiere desarrollo):
 ### ¿Si este sistema fuese implementado, que mejoras aplicarías a tu solución actual? ###
-Deben crearse más entidades como persona, sede fisica, tipos.
-La ubicacion de las sedes seria con coordenadas(latitud,longitud).
-Agregaria atributo foto para cada sede_
-En la base de datos haria unos triggers para contabilizar, por ejemplo complejos de una sede o comisarios.
-Agregaria gestion de equipamiento
-Agregaria manejo de estados(activos, inactivos)
-En este caso centre evento-deporte. Pero se puede dar el caso que un evento ocupe varios deportes y en la solucion no tome en cuenta eso.
+* Deben crearse más entidades como persona, sede fisica, tipos.
+* La ubicacion de las sedes seria con coordenadas(latitud,longitud).
+* Agregaria atributo foto para cada sede_
+* En la base de datos haria unos triggers para contabilizar, por ejemplo complejos de una sede o comisarios.
+* Agregaria gestion de equipamiento
+* Agregaria manejo de estados(activos, inactivos)
+* En este caso centre evento-deporte. Pero se puede dar el caso que un evento ocupe varios deportes y en la solucion no tome en cuenta eso.
 
