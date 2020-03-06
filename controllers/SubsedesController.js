@@ -36,7 +36,7 @@ class SubsedeController{
     static async fetchSubsedes(req, res){
         try{
             await Subsede.findAll({
-                attributes: ['tipo','id_complejo','id_unico','id_poli']
+                attributes: ['id','tipo','id_complejo','id_unico','id_poli']
             })
                 .then(result=>{
                     if(result.length == 0){

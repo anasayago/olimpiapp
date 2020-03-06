@@ -32,7 +32,7 @@ router.get('/usuario/', UsuarioController.welcome);
 // login
 router.post('/usuario/login', UsuarioController.login);
 
-router.post('/usuario/create_usuario',checkJWT, upload.single('logo'),UsuarioController.createUsuarioAccount);
+router.post('/usuario/create_usuario',UsuarioController.createUsuarioAccount);
 
 /**
  |-------------------------

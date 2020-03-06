@@ -1,0 +1,723 @@
+{
+	"info": {
+		"_postman_id": "e3888edb-025e-4505-9828-9ebfb50a057f",
+		"name": "prueba_practica",
+		"description": "Para prueba técnica Peruapps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "localhost:5200/api/usuario/create_usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"nombre\":\"Usuario1\",\n\t\t\"email\": \"usuario1@mail.com\",\n\t\t\"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/usuario/create_usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"usuario",
+								"create_usuario"
+							]
+						},
+						"description": "Crea el usuario inicial. "
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/usuario/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"email\": \"usuario1@mail.com\",\n\t\t\"password\":\"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/usuario/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"usuario",
+								"login"
+							]
+						},
+						"description": "Login y genera token"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "sede",
+			"item": [
+				{
+					"name": "localhost:5200/api/sede/create_sede",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"nombre\":\"Sede C\",\n\t\t\"complejos\": 5,\n\t\t\"presupuesto\":5564\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/sede/create_sede",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"sede",
+								"create_sede"
+							]
+						},
+						"description": "Crear sede"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/sede/get_sedes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5200/api/sede/get_sedes",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"sede",
+								"get_sedes"
+							]
+						},
+						"description": "Obtiene totas las sedes"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/sede/update_sede/1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"nombre\":\"Sede X\",\n\t\t\"complejos\": 6,\n\t\t\"presupuesto\":99564\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/sede/update_sede/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"sede",
+								"update_sede",
+								"1"
+							]
+						},
+						"description": "Actualiza la sede con id=1"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/sede/delete_sede/3",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5200/api/sede/delete_sede/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"sede",
+								"delete_sede",
+								"3"
+							]
+						},
+						"description": "Elimina la sede id=3"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "complejo",
+			"item": [
+				{
+					"name": "localhost:5200/api/complejo/create_complejo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"nombre\": \"Complejo Y\",\n        \"localizacion\": \"Distrito XX\",\n        \"jefe\":\"Samuel\",\n        \"superficie\":2323232,\n        \"id_sede\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/complejo/create_complejo",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"complejo",
+								"create_complejo"
+							]
+						},
+						"description": "Crear complejo para una sede"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/complejo/get_complejos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5200/api/complejo/get_complejos",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"complejo",
+								"get_complejos"
+							]
+						},
+						"description": "Obtener todos los complejos sin distincion de sede"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/complejo/update_complejo/1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"nombre\": \"Complejo C\",\n        \"localizacion\": \"Distrito VV\",\n        \"jefe\":\"Samuel BGGG\",\n        \"superficie\":7772,\n        \"id_sede\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/complejo/update_complejo/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"complejo",
+								"update_complejo",
+								"1"
+							]
+						},
+						"description": "Actuaizar complejo  con id=1"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/complejo/delete_complejo/3",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5200/api/complejo/delete_complejo/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"complejo",
+								"delete_complejo",
+								"3"
+							]
+						},
+						"description": "Eliminar complejo con id=3"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "deporte",
+			"item": [
+				{
+					"name": "localhost:5200/api/deporte/get_deportes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5200/api/deporte/get_deportes",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"deporte",
+								"get_deportes"
+							]
+						},
+						"description": "Obtiene todos los deportes sin distincion"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/deporte/create_deporte",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"nombre\": \"Natación\",\n        \"indicador\": 1,\n        \"id_subsede\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/deporte/create_deporte",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"deporte",
+								"create_deporte"
+							]
+						},
+						"description": "Guarda deporte de cada subsede"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/deporte/update_deporte/1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"nombre\": \"Natación\",\n        \"indicador\": \"E1\",\n        \"id_subsede\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/deporte/update_deporte/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"deporte",
+								"update_deporte",
+								"1"
+							]
+						},
+						"description": "Actualiza deporte con id=1"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/deporte/delete_deporte/3",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5200/api/deporte/delete_deporte/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"deporte",
+								"delete_deporte",
+								"3"
+							]
+						},
+						"description": "Eliminar deporte con id=3"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "subsede",
+			"item": [
+				{
+					"name": "localhost:5200/api/subsede/create_subsede",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"tipo\": \"Polideportivo\",\n        \"id_complejo\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/subsede/create_subsede",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"subsede",
+								"create_subsede"
+							]
+						},
+						"description": "Crear Subsede, esta puede ser de tipo:\nunica\npolideportivo"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/subsede/get_subsedes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5200/api/subsede/get_subsedes",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"subsede",
+								"get_subsedes"
+							]
+						},
+						"description": "Obtienes todas las subsedes sin distincion de complejo"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/subsede/update_subsede/1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\t\"tipo\": \"Unica\",\n        \"id_complejo\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/subsede/update_subsede/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"subsede",
+								"update_subsede",
+								"1"
+							]
+						},
+						"description": "Actualiza Subsede con id=1"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:5200/api/subsede/delete_subsede/2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjo0LCJub21icmUiOiJNaWEgU2F5YWdvIiwiZW1haWwiOiJtb25hQG1haWwuY29tIn0sImlhdCI6MTU4MzQzMDIxMSwiZXhwIjoxNTgzNTE2NjExfQ.lRE1In3uO2AzitaWK0uJpYGAx7f1VM4xwbtwtnpGke8",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5200/api/subsede/delete_subsede/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"subsede",
+								"delete_subsede",
+								"2"
+							]
+						},
+						"description": "Elimina subsede con id=2"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
