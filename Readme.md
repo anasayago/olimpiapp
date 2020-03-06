@@ -40,7 +40,7 @@ cierto equipamiento (ejemplo: arcos, pértigas, barras paralelas, etc)_
 
 ## Modelado de base de datos ⚙️
 
-_En el directorio principal del proyecto archivo olimpiapp_db.sql_
+_En el directorio principal del proyecto archivo **olimpiapp_db.sql**_
 
 ## Desarrollo del proyecto🔩
 
@@ -48,7 +48,7 @@ _En el directorio principal del proyecto podra encontrar el codigo fuente_
 
 ## Coleccion Postman ⌨️
 
-_En el directorio principal del proyecto, archivo:prueba_practica.postman_collection.json_
+_En el directorio principal del proyecto, archivo:**prueba_practica.postman_collection.json**_
 
 ## Pregunta libre (Opcional, no requiere desarrollo):
 ### ¿Si este sistema fuese implementado, que mejoras aplicarías a tu solución actual? ###
