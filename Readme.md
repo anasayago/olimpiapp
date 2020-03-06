@@ -32,30 +32,30 @@ cierto equipamiento (ejemplo: arcos, pértigas, barras paralelas, etc)_
 
 ### Entregables 🔧
 
-*Modelado de base de datos
-*Desarrollo de un Api REST que cuente con:
-**Autentificación de usuarios
-**Servicios CRUD de al menos 2 entidades
+* Modelado de base de datos
+* Desarrollo de un Api REST que cuente con:
+    * Autentificación de usuarios
+    * Servicios CRUD de al menos 2 entidades
 
 ## Modelado de base de datos ⚙️
 
-_ En el directorio principal del proyecto archivo olimpiapp_db.sql _
+_En el directorio principal del proyecto archivo olimpiapp_db.sql_
 
 ## Desarrollo del proyecto🔩
 
-_ En el directorio principal del proyecto podra encontrar el codigo fuente _
+_En el directorio principal del proyecto podra encontrar el codigo fuente_
 
 ## Coleccion Postman ⌨️
 
-_En el directorio principal del proyecto, archivo:prueba_practica.postman_collection.json _
+_En el directorio principal del proyecto, archivo:prueba_practica.postman_collection.json_
 
 ## Pregunta libre (Opcional, no requiere desarrollo):
 ### ¿Si este sistema fuese implementado, que mejoras aplicarías a tu solución actual? ###
-_Deben crearse más entidades como persona, sede fisica, tipos._
-_La ubicacion de las sedes seria con coordenadas(latitud,longitud)._
-_Agregaria atributo foto para cada sede_
-_En la base de datos haria unos triggers para contabilizar, por ejemplo complejos de una sede o comisarios.
-_agregaria gestion de equipamiento_
-_agregaria manejo de estados(activos, inactivos)
-_En este caso centre evento-deporte. Pero se puede dar el caso que un evento ocupe varios deportes y en la solucion no tome en cuenta eso._
+Deben crearse más entidades como persona, sede fisica, tipos.
+La ubicacion de las sedes seria con coordenadas(latitud,longitud).
+Agregaria atributo foto para cada sede_
+En la base de datos haria unos triggers para contabilizar, por ejemplo complejos de una sede o comisarios.
+Agregaria gestion de equipamiento
+Agregaria manejo de estados(activos, inactivos)
+En este caso centre evento-deporte. Pero se puede dar el caso que un evento ocupe varios deportes y en la solucion no tome en cuenta eso.
 
